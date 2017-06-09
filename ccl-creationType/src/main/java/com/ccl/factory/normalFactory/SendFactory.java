@@ -1,4 +1,4 @@
-package com.ccl.factory;
+package com.ccl.factory.normalFactory;
 
 /**
  * Created by ccl on 17/6/8.
@@ -14,5 +14,13 @@ public class SendFactory {
             System.out.println("请输入正确的类型!");
             return null;
         }
+    }
+
+    public Sender produceMail(){
+        return new MailSender();
+    }
+
+    public Sender produceSms(){
+        return new SmsSender();
     }
 }
